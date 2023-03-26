@@ -4,18 +4,19 @@
 // const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
 // const key = generateKey(16, characters);
-// console.log(key); // eg599gb60q926j8i
+// console.log(key); // eg599gb60q926j8i  Спробуй добити задачу і дописати аргументи, 
 
+const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
-function strRandom() {
-    let result       = '';
-    let words        = 'abcdefghijklmnopqrstuvwxyz0123456789';
-    let max_position = words.length - 1;
-        for( i = 0; i < 8; ++i ) {
-            position = Math.floor ( Math.random() * max_position );
-            result = result + words.substring(position, position + 1);
-        }
-    return result;
+function generateKey(length, characters) {
+  let result = '';
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
 }
 
-console.log(strRandom());
+const key = generateKey(3, characters);
+console.log(key);
+
