@@ -20,5 +20,7 @@ function generateKey(length, characters) {
 const key = generateKey(3, characters);
 console.log(key);
 
-const key2 = generateKey(15, characters);
+const characters2 = 'abcdefghij';
+const key2 = generateKey(15, characters2);
 console.log(key2);
+
